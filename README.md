@@ -6,6 +6,23 @@
 
 universal command runner
 
+## dependencies
+
+- docker installed
+
+## usage
+
+- create your wish shortcut runner
+- call available commands
+
+```
+wish [command]
+wish bash
+wish hello-world
+wish composer
+wish composer --tag latest init
+```
+
 ## bash script
 
 ```
