@@ -1,0 +1,23 @@
+language: minimal
+
+branches:
+  only:
+    - master
+
+services:
+  - docker
+
+script:
+  - export VERSION=$(cat ./VERSION)
+  - export MAJOR=$(cat ./VERSION | cut -d. -f1)
+  - export MINOR=$(cat ./VERSION | cut -d. -f2)
+  - export PATCH=$(cat ./VERSION | cut -d. -f3)
+  - docker build --tag elnebuloso/wish --pull --rm --no-cache --file Dockerfile .
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker tag elnebuloso/wish elnebuloso/wish:${MAJOR}.${MINOR}.${PATCH}
+  - docker push elnebuloso/wish:${MAJOR}.${MINOR}.${PATCH}
+  - docker tag elnebuloso/wish elnebuloso/wish:${MAJOR}.${MINOR}
+  - docker push elnebuloso/wish:${MAJOR}.${MINOR}
+  - docker tag elnebuloso/wish elnebuloso/wish:${MAJOR}
+  - docker push elnebuloso/wish:${MAJOR}
+  - docker push elnebuloso/wish
