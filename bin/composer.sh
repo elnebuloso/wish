@@ -37,7 +37,7 @@ _docker-pull-image "${IMAGE}:${TAG}"
 
 ##########################################################################################################
 
-run="docker run --tty --interactive --rm ${IMAGE}:${TAG} ${ARGS}"
+run="docker run --tty --interactive --rm --user $(id -u) --workdir $(pwd) --volume $(pwd):$(pwd) ${IMAGE}:${TAG} ${ARGS}"
 
 ##########################################################################################################
 
