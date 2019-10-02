@@ -19,8 +19,7 @@ do
 done
 
 if [[ ${WISH_VERBOSE_LEVEL} -gt 1 ]]; then
-    echo ""
-    echo "environment gatherd"
+    echo "wish: environment gathered"
     echo ""
     cat /tmp/env
     echo ""
