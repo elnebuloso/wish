@@ -10,6 +10,7 @@ universal command runner
 
 - docker needs to be installed
 - wish is a command, run through docker
+- wish can be used as a generic build container for ci-cd systems like jenkins or gitlab
 
 ## installation
 
@@ -130,7 +131,7 @@ wish composer --version
 WISH_COMPOSER_DOCKER_IMAGE=composer
 WISH_COMPOSER_DOCKER_IMAGE_TAG=latest
 WISH_COMPOSER_DOCKER_IMAGE_CMD=
-WISH_COMPOSER_DOCKER_IMAGE_CACHE_VOLUME=wish-composer-cache
+WISH_COMPOSER_DOCKER_IMAGE_CACHE_VOLUME=WISH_COMPOSER_DOCKER_IMAGE_CACHE_VOLUME
 WISH_COMPOSER_DOCKER_IMAGE_CACHE_DIR=/tmp
 ```
 
@@ -181,9 +182,63 @@ WISH_GOOGLE_CLOSURE_COMPILER_DOCKER_IMAGE_TAG:=latest
 WISH_GOOGLE_CLOSURE_COMPILER_DOCKER_IMAGE_CMD:=
 ```
 
+### compass
+
+```
+wish compass [arguments]
+wish compass --version
+wish compass --help
+```
+
+#### environment variables
+
+```
+WISH_COMPASS_DOCKER_IMAGE:=elnebuloso/compass
+WISH_COMPASS_DOCKER_IMAGE_TAG:=latest
+WISH_COMPASS_DOCKER_IMAGE_CMD:=compass
+```
+
+### npm
+
+```
+wish npm [arguments]
+wish npm --version
+wish npm --help
+```
+
+#### environment variables
+
+```
+WISH_NPM_DOCKER_IMAGE:=node
+WISH_NPM_DOCKER_IMAGE_TAG:=lts-alpine
+WISH_NPM_DOCKER_IMAGE_CMD:=npm
+WISH_NPM_DOCKER_IMAGE_CACHE_VOLUME:=WISH_NPM_DOCKER_IMAGE_CACHE_VOLUME
+WISH_NPM_DOCKER_IMAGE_CACHE_DIR:=/tmp/npm/cache
+```
+
+### yarn
+
+```
+wish yarn [arguments]
+wish yarn --version
+wish yarn --help
+```
+
+#### environment variables
+
+```
+WISH_YARN_DOCKER_IMAGE:=node
+WISH_YARN_DOCKER_IMAGE_TAG:=lts-alpine
+WISH_YARN_DOCKER_IMAGE_CMD:=yarn
+WISH_YARN_DOCKER_IMAGE_CACHE_VOLUME:=WISH_YARN_DOCKER_IMAGE_CACHE_VOLUME
+WISH_YARN_DOCKER_IMAGE_CACHE_DIR:=/tmp
+```
+
 ## extending wish
 
 - add commands as shell scripts under /usr/local/bin
+- add commands without extension
+- naming schema wish.[command], e.g. /usr/local/bin/wish.foo to be called as wish foo
 
 ## development
 

@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - changed environment variable handling, see documentation
 - updated with debug messages
 - added google-closure-compiler
+- added compass
+- added npm
+- added yarn
 
 
 ## [1.1.0] - 2019-10-02

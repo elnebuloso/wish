@@ -20,7 +20,7 @@ _docker-pull-image "${WISH_GOOGLE_CLOSURE_COMPILER_DOCKER_IMAGE}:${WISH_GOOGLE_C
 
 ##########################################################################################################
 
-run="docker run --tty --interactive --rm --user $(id -u) --workdir $(pwd) --volume $(pwd):$(pwd)  --env-file /tmp/env ${WISH_GOOGLE_CLOSURE_COMPILER_DOCKER_IMAGE} ${WISH_GOOGLE_CLOSURE_COMPILER_DOCKER_IMAGE_CMD} $@"
+run="docker run --tty --interactive --rm --user $(id -u) --workdir $(pwd) --volume $(pwd):$(pwd) --volume /var/run/docker.sock:/var/run/docker.sock --env-file /tmp/env ${WISH_GOOGLE_CLOSURE_COMPILER_DOCKER_IMAGE}:${WISH_GOOGLE_CLOSURE_COMPILER_DOCKER_IMAGE_TAG} ${WISH_GOOGLE_CLOSURE_COMPILER_DOCKER_IMAGE_CMD} $@"
 
 ##########################################################################################################
 
