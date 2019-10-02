@@ -15,5 +15,5 @@ if ($command -eq "wish") {
     $dirLocal = "${pwd}"
     $dirContainer = "${pwdLinux}"
 
-    docker run --tty --interactive --rm --volume /var/run/docker.sock:/var/run/docker.sock --volume ${dirLocal}:${dirContainer} --workdir ${dirContainer} ${tag} ${args}
+    docker run --tty --interactive --rm --env WISH_VERBOSE_LEVEL=1 --env WISH_DOCKER_IMAGES_PULL_ALWAYS=yes --volume /var/run/docker.sock:/var/run/docker.sock --volume ${dirLocal}:${dirContainer} --workdir ${dirContainer} ${tag} ${args}
 }

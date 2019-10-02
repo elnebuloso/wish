@@ -1,0 +1,64 @@
+#!/bin/bash
+
+##########################################################################################################
+
+set -e
+
+##########################################################################################################
+
+_gather-environment 'HOME'
+
+##########################################################################################################
+
+ARGS=""
+
+: "${WISH_COMPOSER_DOCKER_IMAGE:=composer}"
+: "${WISH_COMPOSER_DOCKER_IMAGE_TAG:=latest}"
+: "${WISH_COMPOSER_DOCKER_IMAGE_CMD:=}"
+: "${WISH_COMPOSER_DOCKER_IMAGE_CACHE_VOLUME:=wish-composer-cache}"
+: "${WISH_COMPOSER_DOCKER_IMAGE_CACHE_DIR:=/tmp}"
+
+##########################################################################################################
+
+while [[ "$#" -gt 0 ]]
+do
+  case $1 in
+    -i|--img)
+      WISH_COMPOSER_DOCKER_IMAGE="$2"
+      shift
+      ;;
+    -t|--tag)
+      WISH_COMPOSER_DOCKER_IMAGE_TAG="$2"
+      shift
+      ;;
+    -c|--cmd)
+      WISH_COMPOSER_DOCKER_IMAGE_CMD="$2"
+      shift
+      ;;
+    -cv|--cache-volume)
+      WISH_COMPOSER_DOCKER_IMAGE_CACHE_VOLUME="$2"
+      shift
+      ;;
+    -cd|--cache-dir)
+      WISH_COMPOSER_DOCKER_IMAGE_CACHE_DIR="$2"
+      shift
+      ;;
+    *)
+      ARGS="${ARGS}${1} "
+  esac
+  shift
+done
+
+##########################################################################################################
+
+_docker-pull-image "${WISH_COMPOSER_DOCKER_IMAGE}:${WISH_COMPOSER_DOCKER_IMAGE_TAG}"
+
+##########################################################################################################
+
+run="docker run --tty --interactive --rm --user $(id -u) --workdir $(pwd) --volume $(pwd):$(pwd) --volume ${WISH_COMPOSER_DOCKER_IMAGE_CACHE_VOLUME}-uid-$(id -u):${WISH_COMPOSER_DOCKER_IMAGE_CACHE_DIR} --env-file /tmp/env ${WISH_COMPOSER_DOCKER_IMAGE}:${WISH_COMPOSER_DOCKER_IMAGE_TAG} ${WISH_COMPOSER_DOCKER_IMAGE_CMD} ${ARGS}"
+
+##########################################################################################################
+
+_docker-run-image "${run}"
+
+##########################################################################################################

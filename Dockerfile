@@ -8,13 +8,14 @@ RUN apk --update add \
         docker-compose \
     && rm -rf /var/cache/apk/*
 
+ADD VERSION /VERSION
 ADD bin /usr/local/bin
 RUN echo "install commands" \
     && find /usr/local/bin -type f -name '*.sh' | while read f; do mv "$f" "${f%.sh}"; done \
     && chmod +x /usr/local/bin/*
 
 ENV WISH_VERBOSE_LEVEL 1
-ENV WISH_DOCKER_IMAGES_PULL_ALWAYS no
+ENV WISH_DOCKER_IMAGES_PULL_ALWAYS yes
 
 ENTRYPOINT ["_container-run"]
-CMD [""]
+CMD ["wish", "--version"]
