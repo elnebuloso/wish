@@ -10,17 +10,17 @@ _gather-environment 'HOME'
 
 ##########################################################################################################
 
-: ${PHING_PHPMETRICS2_DOCKER_IMAGE:=elnebuloso/php-phpmetrics}
-: ${PHING_PHPMETRICS2_DOCKER_IMAGE_TAG:=2}
-: ${PHING_PHPMETRICS2_DOCKER_IMAGE_CMD:=}
+: ${WISH_PHPMETRICS2_DOCKER_IMAGE:=elnebuloso/php-phpmetrics}
+: ${WISH_PHPMETRICS2_DOCKER_IMAGE_TAG:=2}
+: ${WISH_PHPMETRICS2_DOCKER_IMAGE_CMD:=}
 
 ##########################################################################################################
 
-_docker-pull-image "${PHING_PHPMETRICS2_DOCKER_IMAGE}:${PHING_PHPMETRICS2_DOCKER_IMAGE_TAG}"
+_docker-pull-image "${WISH_PHPMETRICS2_DOCKER_IMAGE}:${WISH_PHPMETRICS2_DOCKER_IMAGE_TAG}"
 
 ##########################################################################################################
 
-run="docker run --tty --interactive --rm --user $(id -u) --workdir $(pwd) --volume $(pwd):$(pwd) --volume /var/run/docker.sock:/var/run/docker.sock --env-file /tmp/env ${PHING_PHPMETRICS2_DOCKER_IMAGE}:${PHING_PHPMETRICS2_DOCKER_IMAGE_TAG} ${PHING_PHPMETRICS2_DOCKER_IMAGE_CMD} $@"
+run="docker run --tty --interactive --rm --user $(id -u) --workdir $(pwd) --volume $(pwd):$(pwd) --volume /var/run/docker.sock:/var/run/docker.sock --env-file /tmp/env ${WISH_PHPMETRICS2_DOCKER_IMAGE}:${WISH_PHPMETRICS2_DOCKER_IMAGE_TAG} ${WISH_PHPMETRICS2_DOCKER_IMAGE_CMD} $@"
 
 ##########################################################################################################
 

@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.3.0] - 2019-10-02
+- naming fixes
+
+
 ## [1.2.0] - 2019-10-02
 - changed environment variable handling, see documentation
 - updated with debug messages

@@ -128,6 +128,8 @@ wish composer --version
 
 #### environment variables
 
+Composer is a dependency manager written in and for PHP
+
 ```
 WISH_COMPOSER_DOCKER_IMAGE=composer
 WISH_COMPOSER_DOCKER_IMAGE_TAG=latest
@@ -137,6 +139,8 @@ WISH_COMPOSER_DOCKER_IMAGE_CACHE_DIR=/tmp
 ```
 
 ### csso
+
+Dockerized Command line interface for CSSO
 
 ```
 wish csso [arguments]
@@ -152,6 +156,8 @@ WISH_CSSO_DOCKER_IMAGE_CMD=
 ```
 
 ### phing
+
+Dockerized Phing + Commons for Continuous Integration
 
 ```
 wish phing [arguments]
@@ -169,6 +175,8 @@ WISH_PHING_DOCKER_IMAGE_CMD=
 
 ### google-closure-compiler
 
+Dockerized Google Closure Compiler
+
 ```
 wish google-closure-compiler [arguments]
 wish google-closure-compiler --version
@@ -185,6 +193,8 @@ WISH_GOOGLE_CLOSURE_COMPILER_DOCKER_IMAGE_CMD:=
 
 ### compass
 
+Compass SCSS Container
+
 ```
 wish compass [arguments]
 wish compass --version
@@ -200,6 +210,8 @@ WISH_COMPASS_DOCKER_IMAGE_CMD:=compass
 ```
 
 ### npm
+
+dependency management for nodejs
 
 ```
 wish npm [arguments]
@@ -219,6 +231,8 @@ WISH_NPM_DOCKER_IMAGE_CACHE_DIR:=/tmp/npm/cache
 
 ### yarn
 
+Fast, reliable, and secure dependency management for nodejs
+
 ```
 wish yarn [arguments]
 wish yarn --version
@@ -237,6 +251,8 @@ WISH_YARN_DOCKER_IMAGE_CACHE_DIR:=/tmp
 
 ### phpmetrics1
 
+Dockerized PhpMetrics - Static analysis tool for PHP
+
 ```
 wish phpmetrics1 [arguments]
 wish phpmetrics1 --version
@@ -246,12 +262,14 @@ wish phpmetrics1 --help
 #### environment variables
 
 ```
-PHING_PHPMETRICS1_DOCKER_IMAGE:=elnebuloso/php-phpmetrics
-PHING_PHPMETRICS1_DOCKER_IMAGE_TAG:=1
-PHING_PHPMETRICS1_DOCKER_IMAGE_CMD:=
+WISH_PHPMETRICS1_DOCKER_IMAGE:=elnebuloso/php-phpmetrics
+WISH_PHPMETRICS1_DOCKER_IMAGE_TAG:=1
+WISH_PHPMETRICS1_DOCKER_IMAGE_CMD:=
 ```
 
 ### phpmetrics2
+
+Dockerized PhpMetrics - Static analysis tool for PHP
 
 ```
 wish phpmetrics2 [arguments]
@@ -262,9 +280,9 @@ wish phpmetrics2 --help
 #### environment variables
 
 ```
-PHING_PHPMETRICS2_DOCKER_IMAGE:=elnebuloso/php-phpmetrics
-PHING_PHPMETRICS2_DOCKER_IMAGE_TAG:=1
-PHING_PHPMETRICS2_DOCKER_IMAGE_CMD:=
+WISH_PHPMETRICS2_DOCKER_IMAGE:=elnebuloso/php-phpmetrics
+WISH_PHPMETRICS2_DOCKER_IMAGE_TAG:=1
+WISH_PHPMETRICS2_DOCKER_IMAGE_CMD:=
 ```
 
 ## extending wish
