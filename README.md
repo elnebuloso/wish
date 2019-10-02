@@ -4,13 +4,14 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/elnebuloso/wish.svg)](https://hub.docker.com/r/elnebuloso/wish)
 [![GitHub](https://img.shields.io/github/license/elnebuloso/wish.svg)](https://github.com/elnebuloso/wish)
 
-universal command runner
+universal command runner (dockerception)
 
 ## dependencies
 
 - docker needs to be installed
 - wish is a command, run through docker
 - wish can be used as a generic build container for ci-cd systems like jenkins or gitlab
+- uses docker to call other commands (dockerception (docker in docker))
 
 ## installation
 
