@@ -120,7 +120,7 @@ wish demo --flag --data foo bar baz
 ### composer
 
 ```
-wish composer [composer_arguments_and_options]
+wish composer [arguments]
 wish composer --version
 ```
 
@@ -137,7 +137,7 @@ WISH_COMPOSER_DOCKER_IMAGE_CACHE_DIR=/tmp
 ### csso
 
 ```
-wish csso [csso_arguments_and_options]
+wish csso [arguments]
 wish csso --version
 ```
 
@@ -152,7 +152,7 @@ WISH_CSSO_DOCKER_IMAGE_CMD=
 ### phing
 
 ```
-wish phing [csso_arguments_and_options]
+wish phing [arguments]
 wish phing --version
 wish phing --help
 ```
@@ -163,6 +163,22 @@ wish phing --help
 WISH_PHING_DOCKER_IMAGE=elnebuloso/phing
 WISH_PHING_DOCKER_IMAGE_TAG=latest
 WISH_PHING_DOCKER_IMAGE_CMD=
+```
+
+### google-closure-compiler
+
+```
+wish google-closure-compiler [arguments]
+wish google-closure-compiler --version
+wish google-closure-compiler --help
+```
+
+#### environment variables
+
+```
+WISH_GOOGLE_CLOSURE_COMPILER_DOCKER_IMAGE:=elnebuloso/google-closure-compiler
+WISH_GOOGLE_CLOSURE_COMPILER_DOCKER_IMAGE_TAG:=latest
+WISH_GOOGLE_CLOSURE_COMPILER_DOCKER_IMAGE_CMD:=
 ```
 
 ## extending wish

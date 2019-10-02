@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [1.2.0] - 2019-10-02
 - changed environment variable handling, see documentation
 - updated with debug messages
+- added google-closure-compiler
 
 
 ## [1.1.0] - 2019-10-02
