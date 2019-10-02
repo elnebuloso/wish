@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - added compass
 - added npm
 - added yarn
+- added phpmetrics1
+- added phpmetrics2
 
 
 ## [1.1.0] - 2019-10-02

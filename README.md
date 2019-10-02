@@ -234,6 +234,38 @@ WISH_YARN_DOCKER_IMAGE_CACHE_VOLUME:=WISH_YARN_DOCKER_IMAGE_CACHE_VOLUME
 WISH_YARN_DOCKER_IMAGE_CACHE_DIR:=/tmp
 ```
 
+### phpmetrics1
+
+```
+wish phpmetrics1 [arguments]
+wish phpmetrics1 --version
+wish phpmetrics1 --help
+```
+
+#### environment variables
+
+```
+PHING_PHPMETRICS1_DOCKER_IMAGE:=elnebuloso/php-phpmetrics
+PHING_PHPMETRICS1_DOCKER_IMAGE_TAG:=1
+PHING_PHPMETRICS1_DOCKER_IMAGE_CMD:=
+```
+
+### phpmetrics2
+
+```
+wish phpmetrics2 [arguments]
+wish phpmetrics2 --version
+wish phpmetrics2 --help
+```
+
+#### environment variables
+
+```
+PHING_PHPMETRICS2_DOCKER_IMAGE:=elnebuloso/php-phpmetrics
+PHING_PHPMETRICS2_DOCKER_IMAGE_TAG:=1
+PHING_PHPMETRICS2_DOCKER_IMAGE_CMD:=
+```
+
 ## extending wish
 
 - add commands as shell scripts under /usr/local/bin
