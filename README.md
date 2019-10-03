@@ -6,6 +6,23 @@
 
 universal command runner (dockerception)
 
+## commands
+
+- composer
+- csso
+- phing
+- google-closure-compiler
+- compass
+- npm
+- yarn
+- phpmetrics1
+- phpmetrics2
+- phpmd
+- phploc
+- phpdepend
+- phpcpd
+- sonar-scanner
+
 ## dependencies
 
 - docker needs to be installed
