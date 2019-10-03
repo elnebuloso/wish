@@ -5,6 +5,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.5.0] - 2019-10-03
+- added sonar-scanner
+
+
 ## [1.4.0] - 2019-10-03
 - added phpcpd
 - added phpdepend

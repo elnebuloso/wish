@@ -357,6 +357,24 @@ WISH_PHPCPD_DOCKER_IMAGE_TAG:=4
 WISH_PHPCPD_DOCKER_IMAGE_CMD:=
 ```
 
+### sonar-scanner
+
+Sonarqube Scanner for Sonarqube Project Metrics
+
+```
+wish sonar-scanner [arguments]
+wish sonar-scanner --version
+wish sonar-scanner --help
+```
+
+#### environment variables
+
+```
+WISH_SONAR_SCANNER_DOCKER_IMAGE:=elnebuloso/sonarqube-scanner
+WISH_SONAR_SCANNER_DOCKER_IMAGE_TAG:=latest
+WISH_SONAR_SCANNER_DOCKER_IMAGE_CMD:=sonar-scanner
+```
+
 ## extending wish
 
 - add commands as shell scripts under /usr/local/bin
