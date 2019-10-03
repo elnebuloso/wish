@@ -128,7 +128,7 @@ wish composer --version
 
 #### environment variables
 
-Composer is a dependency manager written in and for PHP
+Dependency manager for PHP
 
 ```
 WISH_COMPOSER_DOCKER_IMAGE=composer
@@ -140,7 +140,7 @@ WISH_COMPOSER_DOCKER_IMAGE_CACHE_DIR=/tmp
 
 ### csso
 
-Dockerized Command line interface for CSSO
+Command line interface for CSSO
 
 ```
 wish csso [arguments]
@@ -157,7 +157,7 @@ WISH_CSSO_DOCKER_IMAGE_CMD=
 
 ### phing
 
-Dockerized Phing + Commons for Continuous Integration
+Phing Task Runner + Commons for Continuous Integration
 
 ```
 wish phing [arguments]
@@ -175,7 +175,7 @@ WISH_PHING_DOCKER_IMAGE_CMD=
 
 ### google-closure-compiler
 
-Dockerized Google Closure Compiler
+Google Closure Compiler
 
 ```
 wish google-closure-compiler [arguments]
@@ -193,7 +193,7 @@ WISH_GOOGLE_CLOSURE_COMPILER_DOCKER_IMAGE_CMD:=
 
 ### compass
 
-Compass SCSS Container
+Compass SCSS Compiler
 
 ```
 wish compass [arguments]
@@ -211,7 +211,7 @@ WISH_COMPASS_DOCKER_IMAGE_CMD:=compass
 
 ### npm
 
-dependency management for nodejs
+Dependency management for nodejs
 
 ```
 wish npm [arguments]
@@ -231,7 +231,7 @@ WISH_NPM_DOCKER_IMAGE_CACHE_DIR:=/tmp/npm/cache
 
 ### yarn
 
-Fast, reliable, and secure dependency management for nodejs
+Dependency management for nodejs
 
 ```
 wish yarn [arguments]
@@ -251,7 +251,7 @@ WISH_YARN_DOCKER_IMAGE_CACHE_DIR:=/tmp
 
 ### phpmetrics1
 
-Dockerized PhpMetrics - Static analysis tool for PHP
+PhpMetrics 1 - Static analysis tool for PHP
 
 ```
 wish phpmetrics1 [arguments]
@@ -269,7 +269,7 @@ WISH_PHPMETRICS1_DOCKER_IMAGE_CMD:=
 
 ### phpmetrics2
 
-Dockerized PhpMetrics - Static analysis tool for PHP
+PhpMetrics 2 - Static analysis tool for PHP
 
 ```
 wish phpmetrics2 [arguments]
@@ -283,6 +283,78 @@ wish phpmetrics2 --help
 WISH_PHPMETRICS2_DOCKER_IMAGE:=elnebuloso/php-phpmetrics
 WISH_PHPMETRICS2_DOCKER_IMAGE_TAG:=1
 WISH_PHPMETRICS2_DOCKER_IMAGE_CMD:=
+```
+
+### phpmd
+
+PHP Mess Detection
+
+```
+wish phpmd [arguments]
+wish phpmd --version
+wish phpmd --help
+```
+
+#### environment variables
+
+```
+WISH_PHPMD_DOCKER_IMAGE:=elnebuloso/php-phpmd
+WISH_PHPMD_DOCKER_IMAGE_TAG:=2
+WISH_PHPMD_DOCKER_IMAGE_CMD:=
+```
+
+### phploc
+
+PHPLOC, a tool for quickly measuring the size of a PHP project
+
+```
+wish phploc [arguments]
+wish phploc --version
+wish phploc --help
+```
+
+#### environment variables
+
+```
+WISH_PHPLOC_DOCKER_IMAGE:=elnebuloso/php-phploc
+WISH_PHPLOC_DOCKER_IMAGE_TAG:=4
+WISH_PHPLOC_DOCKER_IMAGE_CMD:=
+```
+
+### phpdepend
+
+PHP Code Quality Metrics
+
+```
+wish phpdepend [arguments]
+wish phpdepend --version
+wish phpdepend --help
+```
+
+#### environment variables
+
+```
+WISH_PHPDEPEND_DOCKER_IMAGE:=elnebuloso/php-pdepend
+WISH_PHPDEPEND_DOCKER_IMAGE_TAG:=2
+WISH_PHPDEPEND_DOCKER_IMAGE_CMD:=
+```
+
+### phpcpd
+
+Copy/Paste Detector (CPD) for PHP code
+
+```
+wish phpcpd [arguments]
+wish phpcpd --version
+wish phpcpd --help
+```
+
+#### environment variables
+
+```
+WISH_PHPCPD_DOCKER_IMAGE:=elnebuloso/php-phpcpd
+WISH_PHPCPD_DOCKER_IMAGE_TAG:=4
+WISH_PHPCPD_DOCKER_IMAGE_CMD:=
 ```
 
 ## extending wish

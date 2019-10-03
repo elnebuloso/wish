@@ -5,6 +5,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.4.0] - 2019-10-03
+- added phpcpd
+- added phpdepend
+- added phploc
+- added phpmd
+
+
 ## [1.3.0] - 2019-10-02
 - naming fixes
 
