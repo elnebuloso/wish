@@ -1,6 +1,8 @@
+<img src="https://raw.githubusercontent.com/elnebuloso/wish/master/logo.png" width="100%"/>
+
 # wish
 
-[![Build Status](https://travis-ci.com/elnebuloso/wish.svg?branch=master)](https://travis-ci.com/elnebuloso/wish)
+![Release](https://github.com/elnebuloso/wish/workflows/Release/badge.svg)
 [![Docker Pulls](https://img.shields.io/docker/pulls/elnebuloso/wish.svg)](https://hub.docker.com/r/elnebuloso/wish)
 [![GitHub](https://img.shields.io/github/license/elnebuloso/wish.svg)](https://github.com/elnebuloso/wish)
 
