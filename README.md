@@ -6,7 +6,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/elnebuloso/wish.svg)](https://hub.docker.com/r/elnebuloso/wish)
 [![GitHub](https://img.shields.io/github/license/elnebuloso/wish.svg)](https://github.com/elnebuloso/wish)
 
-universal command runner (dockerception)
+Dockerception Universal Command Runner
 
 ## github
 
