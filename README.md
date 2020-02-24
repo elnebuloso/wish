@@ -8,6 +8,15 @@
 
 universal command runner (dockerception)
 
+## github
+
+- https://github.com/elnebuloso/wish
+
+## docker
+
+- https://hub.docker.com/r/elnebuloso/wish
+- https://hub.docker.com/r/elnebuloso/wish/tags?page=1&ordering=last_updated
+
 ## commands
 
 - composer
